@@ -1,0 +1,378 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p, li ,h1, h2, h3, h4{
+    color: #4c4c4c;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+.wrapper{
+    width: 98%;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2%;
+}
+
+header{
+    background-color: #e5e5e5;
+    padding: 20px 0;
+}
+.logo h1{
+    background: url(images/logo.png) no-repeat;
+    text-indent: -10000px;
+    width: 130px;
+    float: left;
+    height: 36px;
+}
+
+nav ul{
+    list-style-type: none;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul li{
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 36px;
+    text-align: center;
+}
+
+nav ul li a.active{
+    color: green;
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #4e4e4e;
+    font-weight: bold;
+}
+
+nav:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.banner{
+ max-height: 500px;
+ overflow: hidden;
+ position: relative;
+}
+
+.banner img{
+    width: 100%;
+}
+
+#srodkowanie_kontener{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.banner .wrapper{
+    position: relative;
+    height: 100%;
+}
+
+.banner #srodkowanie{
+    width: 100%;
+    position: absolute;
+    top: 50%; /* Czemu liczy od samej gory, a nie od poczatku kontenera banner?*/
+    left: 50%;
+    transform: translate(-50%, -50%) /* (x , y) -> left-/ right+ top- / bottom+ */
+}
+.banner h1{
+    font-size: 26px; /* prz 30px tekst sie zwija- czemu?*/
+    box-sizing: unset;
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+.banner h2{
+    font-size: 26px; /* prz 30px tekst sie zwija- czemu?*/
+    box-sizing: unset;
+    color: #4e4e4e;
+    margin-top: 10px;
+    text-align: center;
+    display: block;
+}
+
+.banner p{
+    border: solid 1px green;
+    width: 130px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+    font-size: 18px;
+}
+
+.banner p:hover{
+    background-color: greenyellow;
+    color: grey;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offer{
+    flex: 1 1 calc(92%/4);
+    margin: 1%;
+    text-align: center;
+}
+
+.offer img{
+    padding: 10px;
+}
+
+.offer p{
+    color: #4e4e4e;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+#last-works{
+    text-transform: uppercase;
+    font-size: 24px;
+    display: block;
+    margin: 10px 0;
+    margin-top: 150px;
+}
+
+.w1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.works{
+    flex: 1 1 calc(98%/3);
+    margin-bottom: 50px;
+}
+
+.works:nth-child(2){
+    margin: 0 1%;
+}
+
+.works img{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.works h3{
+    margin-bottom: 0;
+}
+
+.works h4{
+    margin-top: 5px;
+    font-size: 12px;
+    color: #bbb
+}
+
+.works p{
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+.cytat{
+    margin-top: 60px;
+    width: 60%;
+    padding: 40px 20%;
+    background: url(images/quote.png) no-repeat center 20px;
+    background-color: #efefef;
+    color: #4e4e4e;
+    font-size: 20px;
+    line-height: 1.6em;
+    box-sizing: unset;  /*!!!!!!!!!!!!!!!*/
+    text-align: center;  
+}
+
+.cytat blockquote{
+    margin: 20px;
+}
+
+footer{
+    background-color: #202020;
+    border: solid 10px #151515;
+    padding: 40px 0;
+}
+
+.contact-section{
+    float: left;
+    width: 25%;
+}
+
+.contact-section h3{
+    color: #555;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 18px;
+}
+
+footer p{
+    width: 80%;
+    color: #aaa;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+footer:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+footer p.tr{
+    padding-left: 20px;
+    background: url(images/tweet.png) no-repeat left 6px;
+}
+
+#copyrights {
+    clear: both;
+    color: #aaa;
+    border-top: solid 1px #aaa;
+    padding-top: 30px;
+    margin-top: 30px;
+    width: 100%;
+    font-size: 14px;
+    float: left;
+}
+
+/*Media Queries*/
+
+@media screen and (max-width: 960px){
+    .offer{
+    flex: 1 1 calc(96%/2);
+    margin: 50px 1%;
+    text-align: center;
+}
+
+footer .contact-section{
+    float: left;
+    width: 50%;
+}
+
+footer .contact-section:nth-child(odd){
+    clear:both; /*?????? wyjasnic*/
+}
+.cytat{
+    width:90%;
+    padding:40px 5%;
+}
+.banner h1, .banner h2{
+    font-size: 22px;
+}
+.banner p{
+    font-size: 16px;
+}
+}
+
+@media screen and (max-width: 760px){
+    header nav ul{
+        float:none;
+    }
+    header nav ul li{
+       margin-left: 0;
+       width: calc(100%/6); /*czemu na 100% sie zle rozklada*/
+       font-size: 14px;
+    }
+
+    .logo h1{
+        float:none;
+        margin: 0 auto 15px;
+    }
+
+    .works{
+    flex: 1 1 60%; /*czemu bez marginz ajmuje cala strone*/
+    margin: 30px 20% !important ;
+    float:none;
+    }
+
+    #last-works{
+        text-align:center;
+    }
+    .banner h1, .banner h2{
+        font-size: 16px;
+    }
+    .banner p{
+        font-size: 14px;
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    header nav ul li{
+        width: 90%;
+        margin: 5px 5%;
+        display: block;
+        font-size: 14px;
+     } 
+     header nav ul li a{
+         display: block;
+         font-size: 18px;
+     }
+
+     .offer{
+        flex: 1 1 80%;
+        padding: 0 10%;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    #last-works{
+        margin-top: 30px;
+    }
+
+    .works{
+        flex: 1 1 80%; 
+        margin: 30px 10% !important ;
+        }
+    .works .tekst2{
+            text-align: center;
+        }
+    
+     .cytat{
+           font-size: 16px;
+           font-weight: bold;
+        }
+
+        footer .contact-section{
+            float: none;
+            width: 80%;
+            padding: 10px 10%;
+            border-top: solid #333 1px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        footer .contact-section p{
+            display: block;
+            width: 100%;
+        }
+        .banner h1, .banner h2{
+            font-size: 14px;
+        }
+        .banner p{
+           font-size: 12px;
+        }
+}
+
+
